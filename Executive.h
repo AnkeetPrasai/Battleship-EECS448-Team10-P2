@@ -178,5 +178,7 @@ public:
 	void ringOfFireV(int row, int col, int player);
 
 	void clrscn1();
+
+	void challengerNames();
 };
 #endif

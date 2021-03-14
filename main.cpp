@@ -6,7 +6,9 @@
 #include <fstream>
 
 void clrscn() {
-	cout << "\x1b[2J\x1b[1;1H" << flush;
+	//cout << "\x1b[2J\x1b[1;1H" << flush; //flushes down to new page dosent delete, works on all platforms
+	system("cls"); //works on windows
+	//system("clear") //works on unix
 }
 
 void TwoPlayerGame()

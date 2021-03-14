@@ -40,24 +40,22 @@ void Executive::P1Place()
 			row2 = row1 = inputNumber(1, 10);
 
 			cout << "\nPlayer 1, What column would you like to place the 1x1 ship: ";
-			col2 = col1 = inputAlphabet('A', 'J');
-			clrscn1();
+			col2 = col1 = inputAlphabet('A', 'J');	
 		}
 		else
 		{
-			cout << "\n----------------------------------------\nThis is a 1x" << (m_shipNum - count) + 1 << " ship.\n";
-			cout << "Player 1, What row would you like to place the front of the ship: ";
+			cout << "\n----------------------------------------\n\nThis is a 1x" << (m_shipNum - count) + 1 << " ship.\n\n";
+			cout << "\nPlayer 1, What row would you like to place the front of the ship: ";
 			row1 = inputNumber(1, 10);
 
-			cout << "Player 1, What column would you like to place the front of the ship: ";
+			cout << "\nPlayer 1, What column would you like to place the front of the ship: ";
 			col1 = inputAlphabet('A', 'J');
 
-			cout << "Player 1, What row would you like to place the back of the ship: ";
+			cout << "\nPlayer 1, What row would you like to place the back of the ship: ";
 			row2 = inputNumber(1, 10);
 
-			cout << "Player 1, What column would you like to place the back of the ship: ";
+			cout << "\nPlayer 1, What column would you like to place the back of the ship: ";
 			col2 = inputAlphabet('A', 'J');
-			clrscn1();
 		}
 
 		bool check1xN = P1Board1.checkForShips(row1, col1, row2, col2, count);
@@ -70,9 +68,10 @@ void Executive::P1Place()
 		{
 
 			P1Board1.placeShips(row1, col1, row2, col2, m_shipNum - count);
+			cout << "\n\n Your Ships are placed on the board: \n\n";
 			P1Board1.printBoard();
 			cout << "\n----------------------------------------\n";
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n";
+			cout << "\n\n\n\n";
 			count--;
 		}
 		//6 5 4 3 2 1
@@ -81,7 +80,8 @@ void Executive::P1Place()
 			placing = false;
 		}
 	}
-	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n";
+	clrscn1();
+	//cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n";
 }
 
 void Executive::P2Place()
@@ -104,25 +104,25 @@ void Executive::P2Place()
 		{
 			cout << "\n ----------------------------------------\n";
 			cout << "\nLet's start with the 1x1 ship!\n";
-			cout << "Player 2, What row would you like to place the 1x1 ship: ";
+			cout << "\nPlayer 2, What row would you like to place the 1x1 ship: ";
 			row2 = row1 = inputNumber(1, 10);
 
-			cout << "Player 2, What column would you like to place the 1x1 ship: ";
+			cout << "\nPlayer 2, What column would you like to place the 1x1 ship: ";
 			col2 = col1 = inputAlphabet('A', 'J');
 		}
 		else
 		{
 			cout << "\n----------------------------------------\nThis is a 1x" << (m_shipNum - count) + 1 << " ship.\n";//count=(6-5)+1=2
-			cout << "Player 2, What row would you like to place the front of the ship: ";
+			cout << "\nPlayer 2, What row would you like to place the front of the ship: ";
 			row1 = inputNumber(1, 10);
 
-			cout << "Player 2, What column would you like to place the front of the ship: ";
+			cout << "\nPlayer 2, What column would you like to place the front of the ship: ";
 			col1 = inputAlphabet('A', 'J');
 
-			cout << "Player 2, What row would you like to place the back of the ship: ";
+			cout << "\nPlayer 2, What row would you like to place the back of the ship: ";
 			row2 = inputNumber(1, 10);
 
-			cout << "Player 2, What column would you like to place the back of the ship: ";
+			cout << "\nPlayer 2, What column would you like to place the back of the ship: ";
 			col2 = inputAlphabet('A', 'J');
 		}
 
@@ -138,7 +138,7 @@ void Executive::P2Place()
 			P2Board2.placeShips(row1, col1, row2, col2, m_shipNum - count);
 			P2Board2.printBoard();
 			std::cout << "\n----------------------------------------\n";
-			std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n";
+			std::cout << "\n\n\n\n";
 
 			count--;//count=5
 		}
@@ -148,7 +148,7 @@ void Executive::P2Place()
 			placing = false;
 		}
 	}
-	cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n";
+	clrscn1();
 }
 
 void Executive::P1Attack(int mode, int leader, int turn, bool& abilityused)
@@ -164,19 +164,19 @@ void Executive::P1Attack(int mode, int leader, int turn, bool& abilityused)
 	cout << "\n----------------------------------------\n";
 	cout << "--This is the location of Your ships--\n";
 	P1Board1.printBoard();
-	cout << "\n\n--This is what you attacked--\n";
+	cout << "\n\n--Player 2 reference board / Hit, miss tracker --\n\n";
 	P1AttackBoard.printBoard();
 	cout << "\n----------------------------------------\n";
 	while (attack)
 	{
-		cout << "Player 1 turn to attack" << endl;
+		cout << "\nPlayer 1 turn to attack" << endl;
 		if (mode == 3)
 		{
 		abilityused = AbilityPrompt(leader, abilityused, 1);
 		}
 		if (preuse == abilityused)
 		{
-			cout << "Select Row number: ";
+			cout << "\nSelect Row number: ";
 
 			row = inputNumber(1, 10);
 
@@ -219,7 +219,7 @@ void Executive::P1Attack(int mode, int leader, int turn, bool& abilityused)
 			P1AttackBoard.printBoard();
 			cout << "\n----------------------------------------\n";
 			attack = false;
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n";
+			clrscn1();
 		}
 		attack = false;
 	}
@@ -238,7 +238,7 @@ void Executive::P2Attack(int mode, int leader, int turn2, bool& abilityused2)
 	cout << "\n----------------------------------------\n";
 	cout << "--This is location of your own ships--\n";
 	P2Board2.printBoard();
-	cout << "\n\n--This is what you attacked--\n";
+	cout << "\n\n--Player 1 reference board / Hit, miss tracker --\n\n";
 	P2AttackBoard.printBoard();
 	cout << "\n----------------------------------------\n";
 	while (attack)
@@ -295,7 +295,7 @@ void Executive::P2Attack(int mode, int leader, int turn2, bool& abilityused2)
 			P2AttackBoard.printBoard();
 			cout << "\n----------------------------------------\n";
 			attack = false;
-			cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n";
+			clrscn1();
 		}
 		attack = false;
 	}
@@ -2599,5 +2599,15 @@ void Executive::ringOfFireH(int row, int col, int player)
 }
 
 void Executive::clrscn1() {
-	cout << "\x1b[2J\x1b[1;1H" << flush;
+	string i;
+	//cout << "\x1b[2J\x1b[1;1H" << flush; //flushes down to new page dosent delete, works on all platforms
+	cout << "\n\nSwitching players, enter any key + return when ready: \n\n";
+	cin >> i;
+	system("cls"); //works on windows
+	//system("clear") //works on unix
+}
+
+void Executive::challengerNames() {
+	//code to get names of player 1 and player 2 and use that to personalize experience.  
+	;
 }
