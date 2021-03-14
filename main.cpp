@@ -4,6 +4,12 @@
 #include "Executive.h"
 #include "Board.h"
 #include <fstream>
+using std::cout;
+using std::cin;
+using std::string;
+using std::endl;
+using std::ios;
+using std::fstream;
 
 void clrscn() {
 	//cout << "\x1b[2J\x1b[1;1H" << flush; //flushes down to new page dosent delete, works on all platforms

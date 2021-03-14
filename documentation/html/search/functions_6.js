@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['setshipnum',['setShipNum',['../classBoard.html#a6a438b53b6e73f882f3d3f8c61d80434',1,'Board']]],
-  ['setshipsleft',['setShipsLeft',['../classBoard.html#a6ac0f56f390f96a00eeff50d60a028c8',1,'Board']]],
-  ['setshipsvector',['setShipsVector',['../classBoard.html#a126f964208430e9388bb0fd128d5a7c9',1,'Board']]],
-  ['sinkship',['sinkShip',['../classBoard.html#a5c91db5c0ac865aa62775a8e73fc6ae0',1,'Board']]]
+  ['laserh_96',['LaserH',['../class_executive.html#af7a568f45505b9c16555e11d8bb42731',1,'Executive']]],
+  ['laserv_97',['LaserV',['../class_executive.html#a2b697b570b558d57dfc6c04e8d6e3dd5',1,'Executive']]]
 ];

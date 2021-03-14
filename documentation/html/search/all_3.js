@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['getshipnum',['getShipNum',['../classBoard.html#a00a4d53bf205f293963f746ded3d5e1f',1,'Board']]],
-  ['getshipsleft',['getShipsLeft',['../classBoard.html#a9297ebe3676592de3cd20f48f3f35d70',1,'Board']]]
+  ['executive_15',['Executive',['../class_executive.html',1,'Executive'],['../class_executive.html#aa7e8f5bd7e7afa116e2480025959d386',1,'Executive::Executive()']]],
+  ['executive_2ecpp_16',['Executive.cpp',['../_executive_8cpp.html',1,'']]],
+  ['executive_2eh_17',['Executive.h',['../_executive_8h.html',1,'']]]
 ];

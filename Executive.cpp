@@ -3,6 +3,10 @@
 #include "string"
 #include <cctype>
 #include <ctime>
+using std::endl;
+using std::string;
+using std::cout;
+using std::cin;
 
 Executive::Executive(int num)
 {

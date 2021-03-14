@@ -3,7 +3,7 @@
 #include"Board.h"
 #include <vector>
 
-/** Program to implement the Board
+/** Executive implemenation
   * @Version Team 10 update
   * @Dated 3/14/21
   **/
@@ -13,7 +13,29 @@
 
 struct Point
 {
-	int x, y, h, s, hx, hy, firstx, firsty;
+	/** Stores a int **/
+	int x;
+
+	/** Stores a int **/
+	int y;
+
+	/** Stores a int **/
+	int h;
+
+	/** Stores a int **/
+	int s;
+
+	/** Stores a int where there was a hit **/
+	int hx;
+
+	/** Stores a int where there was a hit **/
+	int hy;
+
+	/** Stores a int **/
+	int firstx;
+
+	/** Stores a int **/
+	int firsty;
 };
 
 class Executive
@@ -124,8 +146,8 @@ public:
 	/**
 	  * Allows the AI to attack based on the difficulty.
 	  *
-	  * @parm int difficulty - Gives the difficulty
-	  * @parm Point - The previous point the AI tried to hit.
+	  * @param int difficulty - Gives the difficulty
+	  * @param Point - The previous point the AI tried to hit.
 	  * @param vector - A vector of a struct pair that stores two interger values
 	  * @return Point - Returns the previous point the AI tried to hit.
 	  **/
@@ -134,16 +156,16 @@ public:
 	/**
 	  * Gets the cheat coordinates for the hardest difficulty.
 	  *
-	  * @return Point - Returns the vector with the ship's coordinates.
+	  * @return Vector<pair> - Returns the vector with the Coordinates of the Ships
 	  **/
 	vector<vector<pair<int, int>>> cheatGet();
 
 	/**
 	  * Prompts the user if they want to use their special shot
 	  *
-	  * @parm int leader - Gives the leader code that the user chose.
-	  * @parm bool abilityused - The check if the user has used their ability yet.
-	  * @parm int player - Gives the player calling the attacks.
+	  * @param int leader - Gives the leader code that the user chose.
+	  * @param bool abilityused - The check if the user has used their ability yet.
+	  * @param int player - Gives the player calling the attacks.
 	  * @return bool - Returns true if the user has used their ability.
 	  **/
 	bool AbilityPrompt(int leader, bool abilityused, int player);
@@ -151,8 +173,8 @@ public:
 	/**
 	  * Hits the opponent board with a laser that hits a whole row.
 	  *
-	  * @parm int row - Gives the row the player would like to hit
-	  * @parm int player - Gives the player that used the attack
+	  * @param int row - Gives the row the player would like to hit
+	  * @param int player - Gives the player that used the attack
 	  * @return Nothing
 	  **/
 	void LaserH(int row, int player); //Horizontal Laser attack
@@ -160,8 +182,8 @@ public:
 	/**
 	  * Hits the opponent board with a laser that hits a whole column.
 	  *
-	  * @parm int col - Gives the column the player would like to hit
-	  * @parm int player - Gives the player that used the attack
+	  * @param int col - Gives the column the player would like to hit
+	  * @param int player - Gives the player that used the attack
 	  * @return Nothing
 	  **/
 	void LaserV(int col, int player); //Vertical Laser attack
@@ -169,7 +191,7 @@ public:
 	/**
 	  * Hits the opponent board with 10 random attacks.
 	  *
-	  * @parm int player - Gives the player that used the attack
+	  * @param int player - Gives the player that used the attack
 	  * @return Nothing
 	  **/
 	void rainOfDeath(int player);
@@ -177,7 +199,7 @@ public:
 	/**
 	  * Hits the opponent board with 10 hit cone attack.
 	  *
-	  * @parm int player - Gives the player that used the attack
+	  * @param int player - Gives the player that used the attack
 	  * @return Nothing
 	  **/
 	void RailGun(int player);
@@ -185,9 +207,9 @@ public:
 	/**
 	  * Hits the opponent board with 5x2 rectangle attack.
 	  *
-	  * @parm int row - Gives the row that the user wants the top right corner to be
-	  * @parm int col - Gives the col that the user wants the top right corner to be
-	  * @parm int player - Gives the player that used the attack
+	  * @param int row - Gives the row that the user wants the top right corner to be
+	  * @param int col - Gives the col that the user wants the top right corner to be
+	  * @param int player - Gives the player that used the attack
 	  * @return Nothing
 	  **/
 	void ringOfFireH(int row, int col, int player);
@@ -195,9 +217,9 @@ public:
 	/**
 	  * Hits the opponent board with 2x5 rectangle attack.
 	  *
-	  * @parm int row - Gives the row that the user wants the top right corner to be
-	  * @parm int col - Gives the col that the user wants the top right corner to be
-	  * @parm int player - Gives the player that used the attack
+	  * @param int row - Gives the row that the user wants the top right corner to be
+	  * @param int col - Gives the col that the user wants the top right corner to be
+	  * @param int player - Gives the player that used the attack
 	  * @return Nothing
 	  **/
 	void ringOfFireV(int row, int col, int player);
