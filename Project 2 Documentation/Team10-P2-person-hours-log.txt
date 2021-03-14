@@ -12,7 +12,14 @@ Alex Wilhelm:
 
 Ankeey Prasai:
 2/28: 1 hr - group pre-planning meeting
-3/8: 1 hr - Group half-way meeting 
+3/5: .5 hr - Code revision / readthrough, + minor changes
+3/8: 1 hr - Group half-way meeting + planned function implementations + started coding on special attacks
+3/12 1 hr - minor changes to convention + planning function implementation
+3/13 2.5 hr - Setup flags for rules function + setup a rules Docu + fixed rules implemenation + fixed bugs in code + fixed bugs for unix implemenation + implemented clear screen in the game
+3/14 4 hr - Worked on documenation and polishing code + fixing all indexing issues + finalized all clrscreen inspections.
+
+10 hr total
+
 
  hr total 
 
