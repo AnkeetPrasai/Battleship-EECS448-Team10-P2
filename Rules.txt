@@ -1,0 +1,107 @@
+<><><><><><><><><><><><><><><>|| BATTLESHIP ++ ||<><><><><><><><><><><><><><><>
+
+Game INTRODUCTION:
+
+The general goal of this game is to eliminate all of your opponents ships.
+	by selecting spots on the game board to see if you hit or miss.
+
+The game is over when one player loses all of their ships.
+
+At the beginning of the game each player will setup their boats on a 10x10
+	grid simulating a board.
+You cannot use the same space for two ships.
+
+You will have the choice between playing 1 to 6 ships that you can place
+	on the board.
+
+Types of ships depends on the amount of ships chosen:
+	These are for each player:
+
+for a game with 1 SHIP:
+	1 SUB (1x1)
+
+for a game with 2 SHIPS:
+	 Sub: (1x1), Patrol Boat: (1x2)
+
+for a game with 3 SHIPS:
+	Sub: (1x1), Patrol Boat: (1x2), Cruiser: (1x3)
+
+for a game with 4 SHIPS:
+	Sub: (1x1), Patrol Boat: (1x2), Cruiser: (1x3), Destroyer: (1x4)
+
+for a game with 5 SHIPS:
+	Sub: (1x1), Patrol Boat: (1x2), Cruiser: (1x3), Destroyer: (1x4),
+	Battleship: (1x5)
+
+for a game with 6 SHIPS:
+	Sub: (1x1), Patrol Boat: (1x2), Cruiser: (1x3), Destroyer: (1x4),
+	Battleship: (1x5), Battleship: (1x6)
+
+On the board, there is a few symbols that represent the ships, hits, misses
+	and the board itself:
+	'.' = PORTION OF BOARD NOT INTERACTED WITH,
+	'H'= HIT
+	'M' = MISS
+	'S'= 1st SHIP (Vertically or Horizontally)
+	'S S' = 2nd SHIP
+	'S S S' = 3rd SHIP
+	'S S S S' = 4th SHIP
+	'S S S S S' = 5th SHIP
+	'S S S S S S' = 6th SHIP
+
+There are Multiple Game modes you can choose from!
+
+PLAYER VS PLAYER :
+
+This MODE is Fairly straightforward, both players will take turns setting up
+	their boards.
+You will be prompted to place your ships, specifying the grid placement and the
+	direction they will be facing.
+After placement is complete you will be prompted to choose GRID POSITIONS to
+	attack.
+If a attack HITS you will see a 'H' on the GRID, on the position you choose to
+	attack.
+If it FAILS you will see a 'M' on the GRID, on the position you choose to
+	attack.
+The First player to sink all ships wins!!
+Good luck!
+
+Player vs AI:
+
+In this mode 1 Player goes against a AI opponent in a Difficult level of their
+	choosing.
+First the Player Chooses the Difficulty LEVEL:
+EASY MODE - AI attacks randomly!
+
+MEDIUM MODE - AI starts attacking randomly, but if it hits, then it targets the
+	adjacent ROWS and COLUMNS till the ship is sunk.
+
+HARD MODE - AI has hacked your communications!! It knows exactly where you are.
+	Each turn will be a hit, You can win but any misses will cost you the game!
+
+2 Player SPECIAL BATTLESHIP : BATTLESHIP ++
+
+This Game MODE starts with the PLAYERS Choosing their Leaders:
+The leaders have special abilities:
+The CHOICES are:
+	Leader:				Ability:
+	Admiral Ankeey 			Laser
+	Battleship Brandon		Rail Gun
+	Captain Wilhelm			Rain of Death
+	Commander Tom			Ring of Fire
+NOTE: ABILITIES CAN ONLY BE USED ONCE PER GAME PER PLAYER!
+Then the Players are instructed to setup their board, by choosing the amount of
+	ships they would like to play with and prompted to place them on said board.
+Once the players are finished the game commences.
+
+Abilities:
+Laser : Can Shoot a High Powered laser down a COLUMN or across a ROW that can
+	Destroy everything in its path.
+Rail Gun: A triangular cone of attack will be placed on the opponent board with
+	5 hits followed by 3 hits followed by 1 hit in adjacent columns or rows. The
+	Direction and orientation of the attack will be chosen by the player.
+Rain of Death: 10 randomized grid points are targeted on the opponents board.
+Ring of Fire: Player gets to attack a Rectangular area on opponents board,
+	the area of affect is going to be the perimeter of a 2x5 rectangle. The
+	player will get to choose where the starting corner for the rectangle is and
+	the orientation for the rectangle.

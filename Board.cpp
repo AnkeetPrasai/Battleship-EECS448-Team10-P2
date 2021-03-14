@@ -176,7 +176,7 @@ char Board::checkCoordinates(int row, int col)
 void Board::update(int row, int col, char c)
 {
 	board[row][col] = c;
-}
+} 
 
 bool Board::isSunk(int row, int col)
 {

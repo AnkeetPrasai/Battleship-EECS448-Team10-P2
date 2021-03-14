@@ -155,7 +155,7 @@ public:
 	  * @parm int - Gives the player that used the attack
 	  * @return Nothing
 	  **/
-	void shotgun(int player);
+	void RailGun(int player);
 
 	/**
 	  * Hits the opponent board with 5x2 rectangle attack.

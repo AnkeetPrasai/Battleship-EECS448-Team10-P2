@@ -3,6 +3,7 @@
 #include <string>
 #include "Executive.h"
 #include "Board.h"
+#include <fstream>
 
 using namespace std;
 
@@ -215,7 +216,7 @@ void SpecialGame()
 	else if (leader == 2)
 	{
 		cout << "You selected Battleship Brandon!\n\n Special ability: ";
-		cout << "Shotgun";
+		cout << "RailGun";
 	}
 	else if (leader == 3)
 	{
@@ -267,7 +268,7 @@ void SpecialGame()
 	else if (leader2 == 2)
 	{
 		cout << "You selected Battleship Brandon!\n\n Special ability: ";
-		cout << "Shotgun";
+		cout << "RailGun";
 	}
 	else if (leader2 == 3)
 	{
@@ -342,17 +343,35 @@ void Rules()
 {
 	int error0 = 0;
 	int choice0 = 0;
+	string rules[150];
+	fstream rulesDoc;
+	rulesDoc.open("Rules.txt", ios::in);
+
+	if (rulesDoc.is_open()) {
+		cout << "success" << endl;
+	}
+	for (int i = 0; i < 150; i++) {
+		getline(rulesDoc, rules[i]);
+	}
 	string c;
 	do
 	{
-		cout << "WHICH MODE WOULD YOU LIKE HELP WITH? (1-3) \n";
+		for (int i = 1; i < 53; i++) {
+			cout << rules[i] << endl;
+		}
+		cout << "WHICH MODE WOULD YOU LIKE HELP WITH? (1-3). Enter 0 to exit Help menu \n\n";
 		cout << "1) 2 Player Battleship (Player vs. Player)\n";
 		cout << "2) 1 Player Battleship (Player vs. AI)\n";
 		cout << "3) 2 Player *Special* Battleship (Player vs. Player)\n";
 		cin >> choice0;
+		if (choice0 == 0) {
+			break;
+		}
 		if (choice0 == 1)
 		{
-			cout << "player vs player.txt \n";
+			for (int i = 54; i < 68; i++) {
+				cout << rules[i] << "\n\n";
+			}
 			cout << "Would you like help with another gamemode? (Enter N to exit from Help menu) \n";
 			cin >> c;
 			if ((c == "N")||(c =="n")) {
@@ -366,7 +385,9 @@ void Rules()
 		}
 		else if (choice0 == 2)
 		{
-			cout << "player vs AI.txt";
+			for (int i = 69; i < 81; i++) {
+				cout << rules[i] << "\n\n";
+			}
 			cout << "Would you like help with another gamemode? (Enter N to exit from Help menu) \n";
 			cin >> c;
 			if ((c == "N") || (c == "n")) {
@@ -380,7 +401,9 @@ void Rules()
 		}
 		else if (choice0 == 3)
 		{
-			cout << "player vs player special mode.txt";
+			for (int i = 82; i < 108; i++) {
+				cout << rules[i] << "\n\n";
+			}
 			cout << "Would you like help with another gamemode? (Enter N to exit from Help menu) \n";
 			cin >> c;
 			if ((c == "N") || (c == "n")) {

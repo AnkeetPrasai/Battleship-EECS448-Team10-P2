@@ -528,8 +528,8 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 		}
 		else if (leader == 2)
 		{
-			cout << "Shotgun\n";
-			abilityname = "Shotgun\n";
+			cout << "RailGun\n";
+			abilityname = "RailGun\n";
 		}
 		else if (leader == 3)
 		{
@@ -555,7 +555,7 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 				cout << "You have chosen to use the ability: " << abilityname << endl;
 				if (leader == 1)
 				{
-					string horvert = "";
+					string horiOrVert = "";
 					int error1 = 0;
 					int error2 = 0;
 					int error3 = 0;
@@ -565,15 +565,15 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 					cout << "Initiate Vertical or Horizontal Laser Cannon (h/v)? ";
 					do
 					{
-						cin >> horvert;
-						if (horvert == "h")
+						cin >> horiOrVert;
+						if  ((horiOrVert == "h")||(horiOrVert == "H"))
 						{
 							cout << "Which row would you like to impact? ";
 							row = inputNumber(1, 10) - 1;
 							LaserH(row, player);
 
 						}
-						else if (horvert == "v")
+						else if ((horiOrVert == "v")||(horiOrVert == "V"))
 						{
 							cout << "Which column would you like to impact (A-J)? ";
 							col = inputAlphabet('A', 'J') - 1;
@@ -588,7 +588,7 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 			}
 			else if (leader == 2)
 			{
-				shotgun(player);
+				RailGun(player);
 			}
 			else if (leader == 3)
 			{
@@ -596,7 +596,7 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 			}
 			else if (leader == 4)
 			{
-				string horvert = "";
+				string horiOrVert = "";
 				int error1 = 0;
 
 				int row = 0;
@@ -605,8 +605,8 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 				cout << "Initiate Vertical or Horizontal Ring of Fire (h/v)? ";
 				do
 				{
-					cin >> horvert;
-					if (horvert == "h")
+					cin >> horiOrVert;
+					if ((horiOrVert == "h")||(horiOrVert == "H"))
 					{
 						cout << "Input in the row you would like the top right hand corner to be (1-10) ";
 						row = inputNumber(1, 10) - 1;
@@ -617,7 +617,7 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 						ringOfFireH(row, col, player);
 
 					}
-					else if (horvert == "v")
+					else if ((horiOrVert == "v")||(horiOrVert == "V"))
 					{
 						cout << "Input in the row you would like the top right hand corner to be (1-10) ";
 						row = inputNumber(1, 10) - 1;
@@ -938,7 +938,7 @@ void Executive::rainOfDeath(int player)
 	}
 }
 
-void Executive::shotgun(int player)
+void Executive::RailGun(int player)
 {
 	int row = 0;
 	int col = 0;
