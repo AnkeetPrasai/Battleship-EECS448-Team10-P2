@@ -5,7 +5,9 @@
 #include "Board.h"
 #include <fstream>
 
-using namespace std;
+void clrscn() {
+	cout << "\x1b[2J\x1b[1;1H" << flush;
+}
 
 void TwoPlayerGame()
 {
@@ -65,6 +67,8 @@ void TwoPlayerGame()
 
 void Play(int d)
 {
+	using std::cout;
+	using std::cin;
 	int turn = 0;
 	bool abilityUsed = false;
 	int shipNum = 0;
@@ -128,6 +132,8 @@ void Play(int d)
 
 void OnePlayerGame()
 {
+	using std::cout;
+	using std::cin;
 	int mode = 2;
 	int leader = 0;
 	cout << "------------------------------------------------------\n";
@@ -171,6 +177,8 @@ void OnePlayerGame()
 
 void SpecialGame()
 {
+	using std::cout;
+	using std::cin;
 	int mode = 3;
 	int leader = 0;
 	int leader2 = 0;
@@ -341,6 +349,8 @@ void SpecialGame()
 
 void Rules()
 {
+	using std::cout;
+	using std::cin;
 	int error0 = 0;
 	int choice0 = 0;
 	string rules[150];
@@ -372,8 +382,9 @@ void Rules()
 			}
 			cout << "Would you like help with another gamemode (Y/N)? (Enter N to exit from Help menu) \n";
 			cin >> c;
-			if ((c == "N")||(c =="n")) {
+			if ((c == "N") || (c == "n")) {
 				cout << "Returning you to the main menu\n\n\n";
+				clrscn();
 				return;
 			}
 			else{
@@ -425,6 +436,8 @@ void Rules()
 
 void PrintMenu()
 {
+	using std::cout;
+	using std::cin;
 	int error = 0;
 	int choice = 0;
 	do
@@ -469,3 +482,4 @@ int main()
 {
 	PrintMenu();
 }
+

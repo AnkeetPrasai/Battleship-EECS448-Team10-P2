@@ -1,6 +1,11 @@
 #include "Board.h"
 #include <iostream>
 #include <cmath>
+using std::cout;
+using std::vector;
+using std::pair;
+using std::endl;
+using std::cin;
 
 Board::Board()
 {
@@ -42,9 +47,9 @@ void Board::printShipsCoordinates()
 	{
 		for (int j = 0; j < shipsCoordinates[i].size(); j++)
 		{
-			std::cout << shipsCoordinates[i][j].first << " " << shipsCoordinates[i][j].second << std::endl;
+			cout << shipsCoordinates[i][j].first << " " << shipsCoordinates[i][j].second << endl;
 		}
-		std::cout << std::endl;
+		cout << endl;
 	}
 }
 
@@ -199,7 +204,7 @@ bool Board::isSunk(int row, int col)
 				}
 			}
 		}
-		std::cout << std::endl;
+		cout << endl;
 	}
 
 	return false;
@@ -217,23 +222,24 @@ void Board::printBoard()
 	{
 		if (i != 9)
 		{
-			std::cout << "  " << i + 1 << "| ";
+			cout << "  " << i + 1 << "| ";
 		}
 		else
 		{
-			std::cout << " " << i + 1 << "| ";
+			cout << " " << i + 1 << "| ";
 		}
 
 		for (int k = 0; k < 10; k++)
 		{
-			std::cout << board[i][k] << " ";
+			cout << board[i][k] << " ";
 		}
-		std::cout << "\n";
+		cout << "\n";
 	}
 
 }
 
-std::vector<std::vector<std::pair<int, int>>> Board::getCoordinates()
+vector<vector<pair<int, int>>> Board::getCoordinates()
 {
 	return shipsCoordinates;
 }
+

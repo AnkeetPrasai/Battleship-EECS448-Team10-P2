@@ -3,7 +3,6 @@
 #include "string"
 #include <cctype>
 #include <ctime>
-using namespace std;
 
 Executive::Executive(int num)
 {
@@ -18,6 +17,8 @@ Executive::Executive(int num)
 
 void Executive::P1Place()
 {
+	using std::cout;
+	using std::cin;
 	bool placing = true;
 	int count = m_shipNum;
 
@@ -34,12 +35,13 @@ void Executive::P1Place()
 		if (count == m_shipNum)//count=6
 		{
 			cout << "\n ----------------------------------------\n";
-			cout << "\nLet's start with the 1x1 ship!\n";
+			cout << "\nLet's start with the 1x1 ship!\n\n";
 			cout << "Player 1, What row would you like to place the 1x1 ship: ";
 			row2 = row1 = inputNumber(1, 10);
 
-			cout << "Player 1, What column would you like to place the 1x1 ship: ";
+			cout << "\nPlayer 1, What column would you like to place the 1x1 ship: ";
 			col2 = col1 = inputAlphabet('A', 'J');
+			clrscn1();
 		}
 		else
 		{
@@ -55,6 +57,7 @@ void Executive::P1Place()
 
 			cout << "Player 1, What column would you like to place the back of the ship: ";
 			col2 = inputAlphabet('A', 'J');
+			clrscn1();
 		}
 
 		bool check1xN = P1Board1.checkForShips(row1, col1, row2, col2, count);
@@ -83,6 +86,8 @@ void Executive::P1Place()
 
 void Executive::P2Place()
 {
+	using std::cout;
+	using std::cin;
 	bool placing = true;
 	int count = m_shipNum;
 	while (placing)
@@ -148,6 +153,8 @@ void Executive::P2Place()
 
 void Executive::P1Attack(int mode, int leader, int turn, bool& abilityused)
 {
+	using std::cout;
+	using std::cin;
 	int row;
 	int col;
 	bool preuse = abilityused;
@@ -220,6 +227,8 @@ void Executive::P1Attack(int mode, int leader, int turn, bool& abilityused)
 
 void Executive::P2Attack(int mode, int leader, int turn2, bool& abilityused2)
 {
+	using std::cout;
+	using std::cin;
 	int row;
 	int col;
 	bool preuse = abilityused2;
@@ -305,6 +314,8 @@ bool Executive::P2Won()
 //Fix the row input.
 int Executive::inputNumber(int begin, int end)
 {
+	using std::cout;
+	using std::cin;
 	int v;
 	while (true) {
 		if (cin >> v) {
@@ -326,6 +337,8 @@ int Executive::inputNumber(int begin, int end)
 
 //Convert char to number, and also check if the input in a valid range
 int Executive::inputAlphabet(char begin, char end) {
+	using std::cout;
+	using std::cin;
 	char v;
 	while (true) {
 		if (cin >> v)
@@ -399,6 +412,8 @@ void Executive::AIPlacement()
 
 void Executive::LaserH(int row, int player)
 {
+	using std::cout;
+	using std::cin;
 	if (player == 1)
 	{
 		for (int i = 0; i < 10; i++)
@@ -457,6 +472,8 @@ void Executive::LaserH(int row, int player)
 
 void Executive::LaserV(int col, int player)
 {
+	using std::cout;
+	using std::cin;
 	if (player == 1)
 	{
 		for (int i = 0; i < 10; i++)
@@ -515,6 +532,8 @@ void Executive::LaserV(int col, int player)
 
 bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 {
+	using std::cout;
+	using std::cin;
 	if (abilityused == false)
 	{
 		int error = 0;
@@ -651,12 +670,10 @@ bool Executive::AbilityPrompt(int leader, bool abilityused, int player)
 	}
 }
 
-void Executive::clrscn() {
-	std::cout << "\x1b[2J";
-}
-
 Point Executive::AIAttack(int difficulty, Point previous, vector<vector<pair<int, int>>> cheat, int& ship, int& hit)
 {
+	using std::cout;
+	using std::cin;
 	int row = 0;
 	int col = 0;
 	bool attack = true;
@@ -874,6 +891,8 @@ vector<vector<pair<int, int>>> Executive::cheatGet()
 
 void Executive::rainOfDeath(int player)
 {
+	using std::cout;
+	using std::cin;
 	srand(time(0));
 	int row = 0;
 	int col = 0;
@@ -940,6 +959,8 @@ void Executive::rainOfDeath(int player)
 
 void Executive::RailGun(int player)
 {
+	using std::cout;
+	using std::cin;
 	int row = 0;
 	int col = 0;
 	int direction = 0;
@@ -2367,6 +2388,8 @@ void Executive::RailGun(int player)
 
 void Executive::ringOfFireV(int row, int col, int player)
 {
+	using std::cout;
+	using std::cin;
 	if (player == 1)
 	{
 		for (int i = 0; i < 5; i++)
@@ -2471,6 +2494,8 @@ void Executive::ringOfFireV(int row, int col, int player)
 
 void Executive::ringOfFireH(int row, int col, int player)
 {
+	using std::cout;
+	using std::cin;
 	if (player == 1)
 	{
 		for (int i = 0; i < 5; i++)
@@ -2571,4 +2596,8 @@ void Executive::ringOfFireH(int row, int col, int player)
 			}
 		}
 	}
+}
+
+void Executive::clrscn1() {
+	cout << "\x1b[2J\x1b[1;1H" << flush;
 }

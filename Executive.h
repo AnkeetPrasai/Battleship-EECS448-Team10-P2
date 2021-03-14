@@ -176,6 +176,7 @@ public:
 	  * @return Nothing
 	  **/
 	void ringOfFireV(int row, int col, int player);
-	void clrscn();
+
+	void clrscn1();
 };
 #endif
