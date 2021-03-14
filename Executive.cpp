@@ -136,6 +136,7 @@ void Executive::P2Place()
 		{
 
 			P2Board2.placeShips(row1, col1, row2, col2, m_shipNum - count);
+			cout << "\n\n Your Ships are placed on the board: \n\n";
 			P2Board2.printBoard();
 			std::cout << "\n----------------------------------------\n";
 			std::cout << "\n\n\n\n";
@@ -2607,7 +2608,3 @@ void Executive::clrscn1() {
 	//system("clear") //works on unix
 }
 
-void Executive::challengerNames() {
-	//code to get names of player 1 and player 2 and use that to personalize experience.  
-	;
-}

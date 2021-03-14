@@ -1,6 +1,12 @@
 #include <iostream>
 #include <vector>
-using namespace std;
+using std::vector;
+using std::pair;
+
+/** Board implementation
+  * @Version Team 10 update
+  * @Dated 3/14/21
+  **/
 
 #ifndef BOARD_H
 #define BOARD_H
@@ -8,17 +14,25 @@ using namespace std;
 class Board
 {
 private:
-
+	/** Multidimensional Char array with 10 x 10 indexes **/
 	char board[10][10];
+
+	/** Ship Counter **/
 	int m_shipNum;
+
+	/** Counter for tracking Ships left on board **/
 	int shipsLeft;
-	std::vector<std::vector<std::pair<int, int>>> shipsCoordinates;
+
+	/** Vector of struct that holds two integer values as coordinates **/
+	vector<vector<pair<int, int>>> shipsCoordinates;
 
 public:
 
 	/**
+	* Constructor
 	* Inlitialize a blank board and variables
-	*
+	* @param Nothing
+	* @returns Nothing
 	**/
 	Board();
 
@@ -26,26 +40,26 @@ public:
 	* Set the number of ships
 	*
 	* @param int - The number of ships get from getShipsNum function
-	* @return int - Nothing
+	* @return Nothing
 	**/
 	void setShipNum(int);
 
 	/**
 	* get the number of ships
-	*
+	* @param Nothing 
 	* @return int - The number of ships
 	**/
 	int getShipNum();
 
 	/**
 	* get how many number of ship left
-	*
+	* @param Nothing
 	* @return The number of the ships that still left
 	**/
 	int getShipsLeft();
 
 	/**
-	*Placing ship at the loction that player want, and also make sure it will not over size
+	* Placing ship at the loction that player want, and also make sure it will not over size
 	*
 	* @param int - row1 coordinate
 	* @param int - column1 coordinate
@@ -57,7 +71,7 @@ public:
 	void placeShips(int, int, int, int, int);
 
 	/**
-	*Check if player hit or miss in the entered location
+	* Check if player hit or miss in the entered location
 	*
 	* @param int - Take in the row coordinate
 	* @param int - Take in the col coordinate
@@ -66,7 +80,7 @@ public:
 	char checkCoordinates(int, int);
 
 	/**
-	*Update the current attack result to board
+	* Update the current attack result to board
 	*
 	* @param int - row coordinate
 	* @param int - column coordinate
@@ -76,22 +90,22 @@ public:
 	void update(int, int, char c);
 
 	/**
-	*Set the number of left ships
+	* Set the number of left ships
 	*
 	* @param int - number of left ships getting from getShipsLeft function
-	* @return None
+	* @return Nothing
 	**/
 	void setShipsLeft(int);
 
 	/**
-	*Help count the number of left ship. Once player sink a ship, the ship left number -1.
-	*
+	* Help count the number of left ship. Once player sink a ship, the ship left number -1.
+	* @param Nothing
 	* @return Nothing
 	**/
 	void sinkShip();
 
 	/**
-	*Check if the ship placement is valid
+	* Check if the ship placement is valid
 	*
 	* @param int - row1 coordinate
 	* @param int - column1 coordinate
@@ -103,7 +117,7 @@ public:
 	bool checkForShips(int, int, int, int, int);
 
 	/**
-	*Initialize a 2D vector
+	* Initialize a 2D vector
 	*
 	* @param int - Take in the number of ships
 	* @return Nothing
@@ -111,14 +125,14 @@ public:
 	void setShipsVector(int num);
 
 	/**
-	*This is a test function we used to see if the coordinate works well
-	*
+	* This is a test function we used to see if the coordinate works well
+	* @param Nothing
 	* @return Nothing
 	**/
 	void printShipsCoordinates();
 
 	/**
-	*Check if player's attack sunk a ship
+	* Check if player's attack sunk a ship
 	*
 	* @param int - Row coordinate
 	* @param int - Col coordinate
@@ -127,7 +141,7 @@ public:
 	bool isSunk(int, int);
 
 	/**
-	*Print out the board with
+	* Print out the board with
 	*
 	* @param int - Row coordinate
 	* @param int - Col coordinate
@@ -138,9 +152,9 @@ public:
 	/**
 	* Gives the vector of coordinates
 	*
-	* @return std::vector<std::vector<std::pair<int, int>>> - Returns the vector filled with the coordinates
+	* @return vector<vector<pair<int, int>>> - Returns the vector filled with the coordinates
 	**/
-	std::vector<std::vector<std::pair<int, int>>> getCoordinates();
+	vector<vector<pair<int, int>>> getCoordinates();
 };
 #endif
 
