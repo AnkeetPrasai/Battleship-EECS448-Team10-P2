@@ -7,14 +7,12 @@ Alex Wilhelm:
 3/8: 1 hr - Group half-way meeting
 3/11: 3 hr - Major bug fixes, work on special game
 3/12: 2 hr - Compiling documentation/necessary text files
+3/14: 1 hr - Testing/making sure things are ready for submission.
 
 15.25 hr total
 
 Ankeey Prasai:
 2/28: 1 hr - group pre-planning meeting
-<<<<<<< HEAD
-3/8: 1 hr - Group half-way meeting
-=======
 3/5: .5 hr - Code revision / readthrough, + minor changes
 3/8: 1 hr - Group half-way meeting + planned function implementations + started coding on special attacks
 3/12 1 hr - minor changes to convention + planning function implementation
@@ -22,10 +20,6 @@ Ankeey Prasai:
 3/14 4 hr - Worked on documenation and polishing code + fixing all indexing issues + finalized all clrscreen inspections.
 
 10 hr total
-
->>>>>>> 8369c9b763c941f2ac2ae04c69e699cd8c3f77e3
-
- hr total
 
 Brandon Lefert:
 2/28: 1 hr - group pre-planning meeting
@@ -39,7 +33,7 @@ Brandon Lefert:
 20.25 hr total
 
 Hu Tang:
-1 hr atrtifact
-1 hr check code and some documentation
+3/14: 1 hr artifact pdf work
+3/14: 1 hr check code and some documentation
 
- 2hr total
+2 hr total
