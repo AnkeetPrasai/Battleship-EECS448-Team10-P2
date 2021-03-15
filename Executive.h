@@ -44,33 +44,33 @@ public:
 	/**
 	  * Print out a board that player 2 can place their ships in order of 1X1, 1X2, 1X3 and etc.
 	  *
-	  * @param None
+	  * @param nothing
 	  * @return Nothing
 	  **/
 	void P2Place();
 
 	/**
 	* Player 1 attacks Player 2 ships and updates Player 1 attack board to let player see if they hit or miss
-	*
+	* @param nothin
 	* @return Nothing
 	**/
 	void P1Attack(int mode, int leader, int turn, bool& abilityused);
 	/**
 	  * Player 2 attacks Player 1 ships and updates Player 2 attack board to let player see if they hit or miss
-	  *
+	  * @param mode, leader, turn, bool, row , col, preuse, attack,
 	  * @return Nothing
 	  **/
 	void P2Attack(int mode, int leader2, int turn2, bool& abilityused2);
 
 	/**
 	* Determine if Player 1 Won.
-  *
+  * @param mode, leader, turn, bool, row , col, preuse, attack,
 	* @return Bool - True for win, false to continue
 	**/
 	bool P1Won();
 	/**
 	  *  Determine if Player 2 Won.
-	*
+		* @ param nothing
 	  * @return Bool - True for win, false to continue
 	  **/
 	bool P2Won();
@@ -93,22 +93,27 @@ public:
 	int inputAlphabet(char begin, char end);
 	/**
 	  * Randomly populates the AI's board
-	  *
+		* @param char - Beggining of valid input range
+	  * @param char - End valid input range
 	  * @return Nothing
 	  **/
 	void AIPlacement();
 	/**
 	  * Allows the AI to attack based on the difficulty.
 	  *
-	  * @parm int - Gives the difficulty
-	  * @parm Point - The previous point the AI tried to hit.
+	  * @param int - Gives the difficulty
+	  * @param Point - The previous point the AI tried to hit.
 	  * @return Point - Returns the previous point the AI tried to hit.
 	  **/
 	Point AIAttack(int difficulty, Point, vector<vector<pair<int, int>>>, int&, int&);
 
 	/**
 	  * Gets the cheat coordinates for the hardest difficulty.
-	  *
+	  * @param int difficutly
+		* @param Point previous
+		* @param int cheat
+		* @param int ship
+		* @param int hit
 	  * @return Point - Returns the vector with the ship's coordinates.
 	  **/
 	vector<vector<pair<int, int>>> cheatGet();

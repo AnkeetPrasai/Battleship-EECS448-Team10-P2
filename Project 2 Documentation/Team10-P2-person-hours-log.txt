@@ -1,20 +1,20 @@
 Alex Wilhelm:
-2/22: 0.5 hr - Communicated with others teams to send off and recieve our project/future project. 
+2/22: 0.5 hr - Communicated with others teams to send off and recieve our project/future project.
 2/28: 1 hr - group pre-planning meeting
 3/1: 1 hr - Major menu/UI overhaul
 3/3: 2.75 hr - Additional UI overhaul, added text and starting code for all 3 new modes
 3/8: 4 hr - Special game developed significantly
-3/8: 1 hr - Group half-way meeting 
+3/8: 1 hr - Group half-way meeting
 3/11: 3 hr - Major bug fixes, work on special game
 3/12: 2 hr - Compiling documentation/necessary text files
 
-15.25 hr total 
+15.25 hr total
 
 Ankeey Prasai:
 2/28: 1 hr - group pre-planning meeting
-3/8: 1 hr - Group half-way meeting 
+3/8: 1 hr - Group half-way meeting
 
- hr total 
+ hr total
 
 Brandon Lefert:
 2/28: 1 hr - group pre-planning meeting
@@ -28,6 +28,7 @@ Brandon Lefert:
 20.25 hr total
 
 Hu Tang:
+1 hr atrtifact
+1 hr check code and some documentation
 
-
- hr total
+ 2hr total

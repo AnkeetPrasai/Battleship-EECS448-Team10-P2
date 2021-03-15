@@ -32,14 +32,14 @@ public:
 
 	/**
 	* get the number of ships
-	*
+	* @param int num
 	* @return int - The number of ships
 	**/
 	int getShipNum();
 
 	/**
 	* get how many number of ship left
-	*
+	* @param nothing
 	* @return The number of the ships that still left
 	**/
 	int getShipsLeft();
@@ -77,7 +77,7 @@ public:
 
 	/**
 	*Set the number of left ships
-	*
+	* @param char - array to store the board
 	* @param int - number of left ships getting from getShipsLeft function
 	* @return None
 	**/
@@ -85,7 +85,7 @@ public:
 
 	/**
 	*Help count the number of left ship. Once player sink a ship, the ship left number -1.
-	*
+	* @ param int - the num of steps
 	* @return Nothing
 	**/
 	void sinkShip();
@@ -112,7 +112,7 @@ public:
 
 	/**
 	*This is a test function we used to see if the coordinate works well
-	*
+	* @int - num of steps
 	* @return Nothing
 	**/
 	void printShipsCoordinates();
@@ -143,4 +143,3 @@ public:
 	std::vector<std::vector<std::pair<int, int>>> getCoordinates();
 };
 #endif
-
