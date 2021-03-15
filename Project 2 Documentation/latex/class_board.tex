@@ -1,0 +1,343 @@
+\hypertarget{class_board}{}\doxysection{Board Class Reference}
+\label{class_board}\index{Board@{Board}}
+
+
+{\ttfamily \#include $<$Board.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_board_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\item 
+char \mbox{\hyperlink{class_board_af30f4b9a97cdd9efc95de23c346489d2}{check\+Coordinates}} (int, int)
+\item 
+bool \mbox{\hyperlink{class_board_aab41abaee4e49b9ac72cf41609a805b7}{check\+For\+Ships}} (int, int, int, int, int)
+\item 
+vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ \mbox{\hyperlink{class_board_a35963cac64f6856f7f062b783b2d50c3}{get\+Coordinates}} ()
+\item 
+int \mbox{\hyperlink{class_board_a00a4d53bf205f293963f746ded3d5e1f}{get\+Ship\+Num}} ()
+\item 
+int \mbox{\hyperlink{class_board_a9297ebe3676592de3cd20f48f3f35d70}{get\+Ships\+Left}} ()
+\item 
+bool \mbox{\hyperlink{class_board_a5424a9343684c5ac720b6c0a43884325}{is\+Sunk}} (int, int)
+\item 
+void \mbox{\hyperlink{class_board_a97fed78111a686789d29c5ed76f6cddc}{place\+Ships}} (int, int, int, int, int)
+\item 
+void \mbox{\hyperlink{class_board_aca49f093314a104381d05998bbf62f7f}{print\+Board}} ()
+\item 
+void \mbox{\hyperlink{class_board_a562436ef0c711572a8caca4be6fe4235}{print\+Ships\+Coordinates}} ()
+\item 
+void \mbox{\hyperlink{class_board_a6a438b53b6e73f882f3d3f8c61d80434}{set\+Ship\+Num}} (int)
+\item 
+void \mbox{\hyperlink{class_board_a6ac0f56f390f96a00eeff50d60a028c8}{set\+Ships\+Left}} (int)
+\item 
+void \mbox{\hyperlink{class_board_a126f964208430e9388bb0fd128d5a7c9}{set\+Ships\+Vector}} (int num)
+\item 
+void \mbox{\hyperlink{class_board_a5c91db5c0ac865aa62775a8e73fc6ae0}{sink\+Ship}} ()
+\item 
+void \mbox{\hyperlink{class_board_a7b3fb2b608749dd9e35df37614e4d555}{update}} (int, int, char c)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{class_board_a1644d3c687400ccb3b222fee1a06eb68}{board}} \mbox{[}10\mbox{]}\mbox{[}10\mbox{]}
+\item 
+int \mbox{\hyperlink{class_board_ac4b559c364c8721977dc8804c8070561}{m\+\_\+ship\+Num}}
+\item 
+vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ \mbox{\hyperlink{class_board_afa72229ad6eeac8f6d865b818077323a}{ships\+Coordinates}}
+\item 
+int \mbox{\hyperlink{class_board_a765a6c5303faac1270f31775e5ff1fe9}{ships\+Left}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_board}{Board}} implementation @\+Version Team 10 update @\+Dated 3/14/21 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_board_a9ee491d4fea680cf69b033374a9fdfcb}\label{class_board_a9ee491d4fea680cf69b033374a9fdfcb}} 
+\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily Board\+::\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Constructor Inlitialize a blank board and variables 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_board_af30f4b9a97cdd9efc95de23c346489d2}\label{class_board_af30f4b9a97cdd9efc95de23c346489d2}} 
+\index{Board@{Board}!checkCoordinates@{checkCoordinates}}
+\index{checkCoordinates@{checkCoordinates}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{checkCoordinates()}{checkCoordinates()}}
+{\footnotesize\ttfamily char Board\+::check\+Coordinates (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+Check if player hit or miss in the entered location
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ Take in the row coordinate \\
+\hline
+{\em int} & -\/ Take in the col coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Char -\/ Return \textquotesingle{}M\textquotesingle{} shows Missed, return \textquotesingle{}H\textquotesingle{} shows hitted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_aab41abaee4e49b9ac72cf41609a805b7}\label{class_board_aab41abaee4e49b9ac72cf41609a805b7}} 
+\index{Board@{Board}!checkForShips@{checkForShips}}
+\index{checkForShips@{checkForShips}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{checkForShips()}{checkForShips()}}
+{\footnotesize\ttfamily bool Board\+::check\+For\+Ships (\begin{DoxyParamCaption}\item[{int}]{x1,  }\item[{int}]{y1,  }\item[{int}]{x2,  }\item[{int}]{y2,  }\item[{int}]{Count\+Ship }\end{DoxyParamCaption})}
+
+Check if the ship placement is valid
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ row1 coordinate \\
+\hline
+{\em int} & -\/ column1 coordinate \\
+\hline
+{\em int} & -\/ row2 coordinate \\
+\hline
+{\em int} & -\/ column2 coordinateand \\
+\hline
+{\em int} & -\/ number of ships \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool -\/ True for valid, false for invalid 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a35963cac64f6856f7f062b783b2d50c3}\label{class_board_a35963cac64f6856f7f062b783b2d50c3}} 
+\index{Board@{Board}!getCoordinates@{getCoordinates}}
+\index{getCoordinates@{getCoordinates}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getCoordinates()}{getCoordinates()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ Board\+::get\+Coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gives the vector of coordinates
+
+\begin{DoxyReturn}{Returns}
+vector$<$vector$<$pair$<$int, int$>$$>$$>$ -\/ Returns the vector filled with the coordinates 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a00a4d53bf205f293963f746ded3d5e1f}\label{class_board_a00a4d53bf205f293963f746ded3d5e1f}} 
+\index{Board@{Board}!getShipNum@{getShipNum}}
+\index{getShipNum@{getShipNum}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getShipNum()}{getShipNum()}}
+{\footnotesize\ttfamily int Board\+::get\+Ship\+Num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get the number of ships 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ The number of ships 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a9297ebe3676592de3cd20f48f3f35d70}\label{class_board_a9297ebe3676592de3cd20f48f3f35d70}} 
+\index{Board@{Board}!getShipsLeft@{getShipsLeft}}
+\index{getShipsLeft@{getShipsLeft}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{getShipsLeft()}{getShipsLeft()}}
+{\footnotesize\ttfamily int Board\+::get\+Ships\+Left (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+get how many number of ship left 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of the ships that still left 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a5424a9343684c5ac720b6c0a43884325}\label{class_board_a5424a9343684c5ac720b6c0a43884325}} 
+\index{Board@{Board}!isSunk@{isSunk}}
+\index{isSunk@{isSunk}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{isSunk()}{isSunk()}}
+{\footnotesize\ttfamily bool Board\+::is\+Sunk (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col }\end{DoxyParamCaption})}
+
+Check if player\textquotesingle{}s attack sunk a ship
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ Row coordinate \\
+\hline
+{\em int} & -\/ Col coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool -\/ True for sunk, false for not missed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a97fed78111a686789d29c5ed76f6cddc}\label{class_board_a97fed78111a686789d29c5ed76f6cddc}} 
+\index{Board@{Board}!placeShips@{placeShips}}
+\index{placeShips@{placeShips}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{placeShips()}{placeShips()}}
+{\footnotesize\ttfamily void Board\+::place\+Ships (\begin{DoxyParamCaption}\item[{int}]{x1\+Coor,  }\item[{int}]{y1\+Coor,  }\item[{int}]{x2\+Coor,  }\item[{int}]{y2\+Coor,  }\item[{int}]{ship\+Size }\end{DoxyParamCaption})}
+
+Placing ship at the loction that player want, and also make sure it will not over size
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ row1 coordinate \\
+\hline
+{\em int} & -\/ column1 coordinate \\
+\hline
+{\em int} & -\/ row2 coordinate \\
+\hline
+{\em int} & -\/ column2 coordinateand \\
+\hline
+{\em int} & -\/ ship size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_aca49f093314a104381d05998bbf62f7f}\label{class_board_aca49f093314a104381d05998bbf62f7f}} 
+\index{Board@{Board}!printBoard@{printBoard}}
+\index{printBoard@{printBoard}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{printBoard()}{printBoard()}}
+{\footnotesize\ttfamily void Board\+::print\+Board (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print out the board with
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ Row coordinate \\
+\hline
+{\em int} & -\/ Col coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool -\/ True for sunk, false for not missed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a562436ef0c711572a8caca4be6fe4235}\label{class_board_a562436ef0c711572a8caca4be6fe4235}} 
+\index{Board@{Board}!printShipsCoordinates@{printShipsCoordinates}}
+\index{printShipsCoordinates@{printShipsCoordinates}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{printShipsCoordinates()}{printShipsCoordinates()}}
+{\footnotesize\ttfamily void Board\+::print\+Ships\+Coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+This is a test function we used to see if the coordinate works well 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a6a438b53b6e73f882f3d3f8c61d80434}\label{class_board_a6a438b53b6e73f882f3d3f8c61d80434}} 
+\index{Board@{Board}!setShipNum@{setShipNum}}
+\index{setShipNum@{setShipNum}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{setShipNum()}{setShipNum()}}
+{\footnotesize\ttfamily void Board\+::set\+Ship\+Num (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+Set the number of ships
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ The number of ships get from get\+Ships\+Num function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a6ac0f56f390f96a00eeff50d60a028c8}\label{class_board_a6ac0f56f390f96a00eeff50d60a028c8}} 
+\index{Board@{Board}!setShipsLeft@{setShipsLeft}}
+\index{setShipsLeft@{setShipsLeft}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{setShipsLeft()}{setShipsLeft()}}
+{\footnotesize\ttfamily void Board\+::set\+Ships\+Left (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+Set the number of left ships
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ number of left ships getting from get\+Ships\+Left function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a126f964208430e9388bb0fd128d5a7c9}\label{class_board_a126f964208430e9388bb0fd128d5a7c9}} 
+\index{Board@{Board}!setShipsVector@{setShipsVector}}
+\index{setShipsVector@{setShipsVector}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{setShipsVector()}{setShipsVector()}}
+{\footnotesize\ttfamily void Board\+::set\+Ships\+Vector (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+Initialize a 2D vector
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ Take in the number of ships \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a5c91db5c0ac865aa62775a8e73fc6ae0}\label{class_board_a5c91db5c0ac865aa62775a8e73fc6ae0}} 
+\index{Board@{Board}!sinkShip@{sinkShip}}
+\index{sinkShip@{sinkShip}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{sinkShip()}{sinkShip()}}
+{\footnotesize\ttfamily void Board\+::sink\+Ship (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Help count the number of left ship. Once player sink a ship, the ship left number -\/1. 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_board_a7b3fb2b608749dd9e35df37614e4d555}\label{class_board_a7b3fb2b608749dd9e35df37614e4d555}} 
+\index{Board@{Board}!update@{update}}
+\index{update@{update}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Board\+::update (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{char}]{c }\end{DoxyParamCaption})}
+
+Update the current attack result to board
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ row coordinate \\
+\hline
+{\em int} & -\/ column coordinate \\
+\hline
+{\em Char} & -\/ Char to show the attack is miss or hit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_board_a1644d3c687400ccb3b222fee1a06eb68}\label{class_board_a1644d3c687400ccb3b222fee1a06eb68}} 
+\index{Board@{Board}!board@{board}}
+\index{board@{board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{board}{board}}
+{\footnotesize\ttfamily char Board\+::board\mbox{[}10\mbox{]}\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+Multidimensional Char array with 10 x 10 indexes \mbox{\Hypertarget{class_board_ac4b559c364c8721977dc8804c8070561}\label{class_board_ac4b559c364c8721977dc8804c8070561}} 
+\index{Board@{Board}!m\_shipNum@{m\_shipNum}}
+\index{m\_shipNum@{m\_shipNum}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{m\_shipNum}{m\_shipNum}}
+{\footnotesize\ttfamily int Board\+::m\+\_\+ship\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+Ship Counter \mbox{\Hypertarget{class_board_afa72229ad6eeac8f6d865b818077323a}\label{class_board_afa72229ad6eeac8f6d865b818077323a}} 
+\index{Board@{Board}!shipsCoordinates@{shipsCoordinates}}
+\index{shipsCoordinates@{shipsCoordinates}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{shipsCoordinates}{shipsCoordinates}}
+{\footnotesize\ttfamily vector$<$vector$<$pair$<$int, int$>$ $>$ $>$ Board\+::ships\+Coordinates\hspace{0.3cm}{\ttfamily [private]}}
+
+Vector of struct that holds two integer values as coordinates \mbox{\Hypertarget{class_board_a765a6c5303faac1270f31775e5ff1fe9}\label{class_board_a765a6c5303faac1270f31775e5ff1fe9}} 
+\index{Board@{Board}!shipsLeft@{shipsLeft}}
+\index{shipsLeft@{shipsLeft}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{shipsLeft}{shipsLeft}}
+{\footnotesize\ttfamily int Board\+::ships\+Left\hspace{0.3cm}{\ttfamily [private]}}
+
+Counter for tracking Ships left on board 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ankee/\+Documents/\+Git\+Hub/\+Battleship-\/\+EECS448-\/\+Team10-\/\+P2/\mbox{\hyperlink{_board_8h}{Board.\+h}}\item 
+C\+:/\+Users/ankee/\+Documents/\+Git\+Hub/\+Battleship-\/\+EECS448-\/\+Team10-\/\+P2/\mbox{\hyperlink{_board_8cpp}{Board.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,496 @@
+\hypertarget{class_executive}{}\doxysection{Executive Class Reference}
+\label{class_executive}\index{Executive@{Executive}}
+
+
+{\ttfamily \#include $<$Executive.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_executive_a5a065c31f7edcac30e32480c7b8ffcd6}{Ability\+Prompt}} (int leader, bool abilityused, int player)
+\item 
+\mbox{\hyperlink{struct_point}{Point}} \mbox{\hyperlink{class_executive_a483e7e34bd604ff81a54df1ad98f45a6}{AIAttack}} (int difficulty, \mbox{\hyperlink{struct_point}{Point}}, vector$<$ vector$<$ pair$<$ int, int $>$$>$$>$, int \&, int \&)
+\item 
+void \mbox{\hyperlink{class_executive_a220c640cbd3997971fd7cc9b93d4f929}{AIPlacement}} ()
+\item 
+vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ \mbox{\hyperlink{class_executive_a1b6d5e1396d661be28bbb2012fc22932}{cheat\+Get}} ()
+\item 
+void \mbox{\hyperlink{class_executive_a6be696941fd0d0a07d6ae2f1d8c17297}{clrscn1}} ()
+\item 
+\mbox{\hyperlink{class_executive_aa7e8f5bd7e7afa116e2480025959d386}{Executive}} (int num)
+\item 
+int \mbox{\hyperlink{class_executive_a99db89b335e7054f8a5943b2e99dbccf}{input\+Alphabet}} (char begin, char end)
+\item 
+int \mbox{\hyperlink{class_executive_a4150511879fc7c93dfaccde1657f7177}{input\+Number}} (int begin, int end)
+\item 
+void \mbox{\hyperlink{class_executive_af7a568f45505b9c16555e11d8bb42731}{LaserH}} (int row, int player)
+\item 
+void \mbox{\hyperlink{class_executive_a2b697b570b558d57dfc6c04e8d6e3dd5}{LaserV}} (int col, int player)
+\item 
+void \mbox{\hyperlink{class_executive_a4986b47e2fb6dc3be4cd942ae34262d2}{P1\+Attack}} (int mode, int leader, int turn, bool \&abilityused)
+\item 
+void \mbox{\hyperlink{class_executive_a8988b61d6a4fe5d71cd43e5211f7d2a3}{P1\+Place}} ()
+\item 
+bool \mbox{\hyperlink{class_executive_a8c5e2a6ccc368a3dc5a4a1a1359525ae}{P1\+Won}} ()
+\item 
+void \mbox{\hyperlink{class_executive_a4aa6fbf8839e99ed798b2bd7079e848b}{P2\+Attack}} (int mode, int leader2, int turn2, bool \&abilityused2)
+\item 
+void \mbox{\hyperlink{class_executive_a233722af57744c034a2014051720fc2f}{P2\+Place}} ()
+\item 
+bool \mbox{\hyperlink{class_executive_ae7506cd77aa5d4c6928611fc98d42921}{P2\+Won}} ()
+\item 
+void \mbox{\hyperlink{class_executive_ae6bc570a4f321c981ceccbe2aa5220e2}{Rail\+Gun}} (int player)
+\item 
+void \mbox{\hyperlink{class_executive_a2424807028b31f7e6d299a72d0f773ad}{rain\+Of\+Death}} (int player)
+\item 
+void \mbox{\hyperlink{class_executive_a1de3c36d85103789b18e50591360f73e}{ring\+Of\+FireH}} (int row, int col, int player)
+\item 
+void \mbox{\hyperlink{class_executive_a24e8183a8e5c0d1512547c9a799ac642}{ring\+Of\+FireV}} (int row, int col, int player)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_executive_a06beb6d83dbb69565104417044d40e3e}{col1}}
+\item 
+int \mbox{\hyperlink{class_executive_a17dc9507c1826b7c63aef41b7139b08e}{col2}}
+\item 
+int \mbox{\hyperlink{class_executive_a69df3a3de27964a85aca7006169974ca}{m\+\_\+ship\+Num}}
+\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_executive_aa9f4df0546f973e83f4ccc3aafc1b3f7}{P1\+Attack\+Board}}
+\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_executive_a21b2a9fd86c1f4a772bc7d275e0254a5}{P1\+Board1}}
+\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_executive_a8e756e97c6be4af9a26095bfc55327a5}{P2\+Attack\+Board}}
+\item 
+\mbox{\hyperlink{class_board}{Board}} \mbox{\hyperlink{class_executive_abd0e209644a40b2983d717b952373b51}{P2\+Board2}}
+\item 
+bool \mbox{\hyperlink{class_executive_a0d71a285fb70d5ad6b59da3c07dd07ee}{player1\+Won}} = false
+\item 
+bool \mbox{\hyperlink{class_executive_a33c30ea26e9bfea1c58b0c2842f17ae9}{player2\+Won}} = false
+\item 
+int \mbox{\hyperlink{class_executive_a6a72a7a54e816899072732df36fa548b}{row1}}
+\item 
+int \mbox{\hyperlink{class_executive_a5d96027b87215ab85e4adf940e09f346}{row2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_executive_aa7e8f5bd7e7afa116e2480025959d386}\label{class_executive_aa7e8f5bd7e7afa116e2480025959d386}} 
+\index{Executive@{Executive}!Executive@{Executive}}
+\index{Executive@{Executive}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{Executive()}{Executive()}}
+{\footnotesize\ttfamily Executive\+::\+Executive (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_executive}{Executive}} Class constructor, Initialize variables and functions
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ The number of ships \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_executive_a5a065c31f7edcac30e32480c7b8ffcd6}\label{class_executive_a5a065c31f7edcac30e32480c7b8ffcd6}} 
+\index{Executive@{Executive}!AbilityPrompt@{AbilityPrompt}}
+\index{AbilityPrompt@{AbilityPrompt}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{AbilityPrompt()}{AbilityPrompt()}}
+{\footnotesize\ttfamily bool Executive\+::\+Ability\+Prompt (\begin{DoxyParamCaption}\item[{int}]{leader,  }\item[{bool}]{abilityused,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Prompts the user if they want to use their special shot
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & leader -\/ Gives the leader code that the user chose. \\
+\hline
+{\em bool} & abilityused -\/ The check if the user has used their ability yet. \\
+\hline
+{\em int} & player -\/ Gives the player calling the attacks. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ Returns true if the user has used their ability. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a483e7e34bd604ff81a54df1ad98f45a6}\label{class_executive_a483e7e34bd604ff81a54df1ad98f45a6}} 
+\index{Executive@{Executive}!AIAttack@{AIAttack}}
+\index{AIAttack@{AIAttack}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{AIAttack()}{AIAttack()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_point}{Point}} Executive\+::\+AIAttack (\begin{DoxyParamCaption}\item[{int}]{difficulty,  }\item[{\mbox{\hyperlink{struct_point}{Point}}}]{previous,  }\item[{vector$<$ vector$<$ pair$<$ int, int $>$$>$$>$}]{cheat,  }\item[{int \&}]{ship,  }\item[{int \&}]{hit }\end{DoxyParamCaption})}
+
+Allows the AI to attack based on the difficulty.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & difficulty -\/ Gives the difficulty \\
+\hline
+{\em \mbox{\hyperlink{struct_point}{Point}}} & -\/ The previous point the AI tried to hit. \\
+\hline
+{\em vector} & -\/ A vector of a struct pair that stores two interger values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{struct_point}{Point}} -\/ Returns the previous point the AI tried to hit. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a220c640cbd3997971fd7cc9b93d4f929}\label{class_executive_a220c640cbd3997971fd7cc9b93d4f929}} 
+\index{Executive@{Executive}!AIPlacement@{AIPlacement}}
+\index{AIPlacement@{AIPlacement}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{AIPlacement()}{AIPlacement()}}
+{\footnotesize\ttfamily void Executive\+::\+AIPlacement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Randomly populates the AI\textquotesingle{}s board 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a1b6d5e1396d661be28bbb2012fc22932}\label{class_executive_a1b6d5e1396d661be28bbb2012fc22932}} 
+\index{Executive@{Executive}!cheatGet@{cheatGet}}
+\index{cheatGet@{cheatGet}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{cheatGet()}{cheatGet()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ pair$<$ int, int $>$ $>$ $>$ Executive\+::cheat\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the cheat coordinates for the hardest difficulty.
+
+\begin{DoxyReturn}{Returns}
+Vector$<$pair$>$ -\/ Returns the vector with the Coordinates of the Ships 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a6be696941fd0d0a07d6ae2f1d8c17297}\label{class_executive_a6be696941fd0d0a07d6ae2f1d8c17297}} 
+\index{Executive@{Executive}!clrscn1@{clrscn1}}
+\index{clrscn1@{clrscn1}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{clrscn1()}{clrscn1()}}
+{\footnotesize\ttfamily void Executive\+::clrscn1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clears the screen to remove past console outputs
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a99db89b335e7054f8a5943b2e99dbccf}\label{class_executive_a99db89b335e7054f8a5943b2e99dbccf}} 
+\index{Executive@{Executive}!inputAlphabet@{inputAlphabet}}
+\index{inputAlphabet@{inputAlphabet}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{inputAlphabet()}{inputAlphabet()}}
+{\footnotesize\ttfamily int Executive\+::input\+Alphabet (\begin{DoxyParamCaption}\item[{char}]{begin,  }\item[{char}]{end }\end{DoxyParamCaption})}
+
+Takes in user input, it must a letter that will be converted to a number
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & -\/ Beggining of valid input range \\
+\hline
+{\em char} & -\/ End valid input range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ Returns valid user input 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a4150511879fc7c93dfaccde1657f7177}\label{class_executive_a4150511879fc7c93dfaccde1657f7177}} 
+\index{Executive@{Executive}!inputNumber@{inputNumber}}
+\index{inputNumber@{inputNumber}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{inputNumber()}{inputNumber()}}
+{\footnotesize\ttfamily int Executive\+::input\+Number (\begin{DoxyParamCaption}\item[{int}]{begin,  }\item[{int}]{end }\end{DoxyParamCaption})}
+
+Takes in user input, it must a number or else user must enter new input.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & -\/ Beggining of valid input range \\
+\hline
+{\em int} & -\/ End valid input range \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ Returns valid user input 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_af7a568f45505b9c16555e11d8bb42731}\label{class_executive_af7a568f45505b9c16555e11d8bb42731}} 
+\index{Executive@{Executive}!LaserH@{LaserH}}
+\index{LaserH@{LaserH}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{LaserH()}{LaserH()}}
+{\footnotesize\ttfamily void Executive\+::\+LaserH (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Hits the opponent board with a laser that hits a whole row.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & row -\/ Gives the row the player would like to hit \\
+\hline
+{\em int} & player -\/ Gives the player that used the attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a2b697b570b558d57dfc6c04e8d6e3dd5}\label{class_executive_a2b697b570b558d57dfc6c04e8d6e3dd5}} 
+\index{Executive@{Executive}!LaserV@{LaserV}}
+\index{LaserV@{LaserV}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{LaserV()}{LaserV()}}
+{\footnotesize\ttfamily void Executive\+::\+LaserV (\begin{DoxyParamCaption}\item[{int}]{col,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Hits the opponent board with a laser that hits a whole column.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & col -\/ Gives the column the player would like to hit \\
+\hline
+{\em int} & player -\/ Gives the player that used the attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a4986b47e2fb6dc3be4cd942ae34262d2}\label{class_executive_a4986b47e2fb6dc3be4cd942ae34262d2}} 
+\index{Executive@{Executive}!P1Attack@{P1Attack}}
+\index{P1Attack@{P1Attack}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P1Attack()}{P1Attack()}}
+{\footnotesize\ttfamily void Executive\+::\+P1\+Attack (\begin{DoxyParamCaption}\item[{int}]{mode,  }\item[{int}]{leader,  }\item[{int}]{turn,  }\item[{bool \&}]{abilityused }\end{DoxyParamCaption})}
+
+Player 1 attacks Player 2 ships and updates Player 1 attack board to let player see if they hit or miss 
+\begin{DoxyParams}{Parameters}
+{\em int} & mode -\/ game mode \\
+\hline
+{\em int} & leader -\/ Leader chosen by player \\
+\hline
+{\em int} & turn -\/ turn counter \\
+\hline
+{\em bool\&} & ability used -\/ Ability use switch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a8988b61d6a4fe5d71cd43e5211f7d2a3}\label{class_executive_a8988b61d6a4fe5d71cd43e5211f7d2a3}} 
+\index{Executive@{Executive}!P1Place@{P1Place}}
+\index{P1Place@{P1Place}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P1Place()}{P1Place()}}
+{\footnotesize\ttfamily void Executive\+::\+P1\+Place (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print out a board that player 1 can place their ships in order of 1X1, 1X2, 1X3 and etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a8c5e2a6ccc368a3dc5a4a1a1359525ae}\label{class_executive_a8c5e2a6ccc368a3dc5a4a1a1359525ae}} 
+\index{Executive@{Executive}!P1Won@{P1Won}}
+\index{P1Won@{P1Won}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P1Won()}{P1Won()}}
+{\footnotesize\ttfamily bool Executive\+::\+P1\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine if Player 1 Won. 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool -\/ True for win, false to continue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a4aa6fbf8839e99ed798b2bd7079e848b}\label{class_executive_a4aa6fbf8839e99ed798b2bd7079e848b}} 
+\index{Executive@{Executive}!P2Attack@{P2Attack}}
+\index{P2Attack@{P2Attack}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P2Attack()}{P2Attack()}}
+{\footnotesize\ttfamily void Executive\+::\+P2\+Attack (\begin{DoxyParamCaption}\item[{int}]{mode,  }\item[{int}]{leader2,  }\item[{int}]{turn2,  }\item[{bool \&}]{abilityused2 }\end{DoxyParamCaption})}
+
+Player 2 attacks Player 1 ships and updates Player 2 attack board to let player see if they hit or miss 
+\begin{DoxyParams}{Parameters}
+{\em int} & mode -\/ game mode \\
+\hline
+{\em int} & leader2 -\/ Leader chosen by player \\
+\hline
+{\em int} & turn -\/ turn counter \\
+\hline
+{\em bool\&} & ability used -\/ Ability use switch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a233722af57744c034a2014051720fc2f}\label{class_executive_a233722af57744c034a2014051720fc2f}} 
+\index{Executive@{Executive}!P2Place@{P2Place}}
+\index{P2Place@{P2Place}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P2Place()}{P2Place()}}
+{\footnotesize\ttfamily void Executive\+::\+P2\+Place (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Print out a board that player 2 can place their ships in order of 1X1, 1X2, 1X3 and etc.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_ae7506cd77aa5d4c6928611fc98d42921}\label{class_executive_ae7506cd77aa5d4c6928611fc98d42921}} 
+\index{Executive@{Executive}!P2Won@{P2Won}}
+\index{P2Won@{P2Won}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P2Won()}{P2Won()}}
+{\footnotesize\ttfamily bool Executive\+::\+P2\+Won (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Determine if Player 2 Won. 
+\begin{DoxyParams}{Parameters}
+{\em Nothing} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Bool -\/ True for win, false to continue 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_ae6bc570a4f321c981ceccbe2aa5220e2}\label{class_executive_ae6bc570a4f321c981ceccbe2aa5220e2}} 
+\index{Executive@{Executive}!RailGun@{RailGun}}
+\index{RailGun@{RailGun}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{RailGun()}{RailGun()}}
+{\footnotesize\ttfamily void Executive\+::\+Rail\+Gun (\begin{DoxyParamCaption}\item[{int}]{player }\end{DoxyParamCaption})}
+
+Hits the opponent board with 10 hit cone attack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & player -\/ Gives the player that used the attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a2424807028b31f7e6d299a72d0f773ad}\label{class_executive_a2424807028b31f7e6d299a72d0f773ad}} 
+\index{Executive@{Executive}!rainOfDeath@{rainOfDeath}}
+\index{rainOfDeath@{rainOfDeath}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{rainOfDeath()}{rainOfDeath()}}
+{\footnotesize\ttfamily void Executive\+::rain\+Of\+Death (\begin{DoxyParamCaption}\item[{int}]{player }\end{DoxyParamCaption})}
+
+Hits the opponent board with 10 random attacks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & player -\/ Gives the player that used the attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a1de3c36d85103789b18e50591360f73e}\label{class_executive_a1de3c36d85103789b18e50591360f73e}} 
+\index{Executive@{Executive}!ringOfFireH@{ringOfFireH}}
+\index{ringOfFireH@{ringOfFireH}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{ringOfFireH()}{ringOfFireH()}}
+{\footnotesize\ttfamily void Executive\+::ring\+Of\+FireH (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Hits the opponent board with 5x2 rectangle attack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & row -\/ Gives the row that the user wants the top right corner to be \\
+\hline
+{\em int} & col -\/ Gives the col that the user wants the top right corner to be \\
+\hline
+{\em int} & player -\/ Gives the player that used the attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_executive_a24e8183a8e5c0d1512547c9a799ac642}\label{class_executive_a24e8183a8e5c0d1512547c9a799ac642}} 
+\index{Executive@{Executive}!ringOfFireV@{ringOfFireV}}
+\index{ringOfFireV@{ringOfFireV}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{ringOfFireV()}{ringOfFireV()}}
+{\footnotesize\ttfamily void Executive\+::ring\+Of\+FireV (\begin{DoxyParamCaption}\item[{int}]{row,  }\item[{int}]{col,  }\item[{int}]{player }\end{DoxyParamCaption})}
+
+Hits the opponent board with 2x5 rectangle attack.
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & row -\/ Gives the row that the user wants the top right corner to be \\
+\hline
+{\em int} & col -\/ Gives the col that the user wants the top right corner to be \\
+\hline
+{\em int} & player -\/ Gives the player that used the attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Nothing 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_executive_a06beb6d83dbb69565104417044d40e3e}\label{class_executive_a06beb6d83dbb69565104417044d40e3e}} 
+\index{Executive@{Executive}!col1@{col1}}
+\index{col1@{col1}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{col1}{col1}}
+{\footnotesize\ttfamily int Executive\+::col1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_executive_a17dc9507c1826b7c63aef41b7139b08e}\label{class_executive_a17dc9507c1826b7c63aef41b7139b08e}} 
+\index{Executive@{Executive}!col2@{col2}}
+\index{col2@{col2}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{col2}{col2}}
+{\footnotesize\ttfamily int Executive\+::col2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_executive_a69df3a3de27964a85aca7006169974ca}\label{class_executive_a69df3a3de27964a85aca7006169974ca}} 
+\index{Executive@{Executive}!m\_shipNum@{m\_shipNum}}
+\index{m\_shipNum@{m\_shipNum}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{m\_shipNum}{m\_shipNum}}
+{\footnotesize\ttfamily int Executive\+::m\+\_\+ship\+Num\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_executive_aa9f4df0546f973e83f4ccc3aafc1b3f7}\label{class_executive_aa9f4df0546f973e83f4ccc3aafc1b3f7}} 
+\index{Executive@{Executive}!P1AttackBoard@{P1AttackBoard}}
+\index{P1AttackBoard@{P1AttackBoard}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P1AttackBoard}{P1AttackBoard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} Executive\+::\+P1\+Attack\+Board\hspace{0.3cm}{\ttfamily [private]}}
+
+Sets up a board for P1 to place attacks on \mbox{\Hypertarget{class_executive_a21b2a9fd86c1f4a772bc7d275e0254a5}\label{class_executive_a21b2a9fd86c1f4a772bc7d275e0254a5}} 
+\index{Executive@{Executive}!P1Board1@{P1Board1}}
+\index{P1Board1@{P1Board1}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P1Board1}{P1Board1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} Executive\+::\+P1\+Board1\hspace{0.3cm}{\ttfamily [private]}}
+
+Sets up a \mbox{\hyperlink{class_board}{Board}} for P1 to place ships \mbox{\Hypertarget{class_executive_a8e756e97c6be4af9a26095bfc55327a5}\label{class_executive_a8e756e97c6be4af9a26095bfc55327a5}} 
+\index{Executive@{Executive}!P2AttackBoard@{P2AttackBoard}}
+\index{P2AttackBoard@{P2AttackBoard}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P2AttackBoard}{P2AttackBoard}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} Executive\+::\+P2\+Attack\+Board\hspace{0.3cm}{\ttfamily [private]}}
+
+Sets up a board for P2 to place attacks on \mbox{\Hypertarget{class_executive_abd0e209644a40b2983d717b952373b51}\label{class_executive_abd0e209644a40b2983d717b952373b51}} 
+\index{Executive@{Executive}!P2Board2@{P2Board2}}
+\index{P2Board2@{P2Board2}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{P2Board2}{P2Board2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_board}{Board}} Executive\+::\+P2\+Board2\hspace{0.3cm}{\ttfamily [private]}}
+
+Sets up a \mbox{\hyperlink{class_board}{Board}} for P2 to place ships \mbox{\Hypertarget{class_executive_a0d71a285fb70d5ad6b59da3c07dd07ee}\label{class_executive_a0d71a285fb70d5ad6b59da3c07dd07ee}} 
+\index{Executive@{Executive}!player1Won@{player1Won}}
+\index{player1Won@{player1Won}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{player1Won}{player1Won}}
+{\footnotesize\ttfamily bool Executive\+::player1\+Won = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Player 1 win tracker \mbox{\Hypertarget{class_executive_a33c30ea26e9bfea1c58b0c2842f17ae9}\label{class_executive_a33c30ea26e9bfea1c58b0c2842f17ae9}} 
+\index{Executive@{Executive}!player2Won@{player2Won}}
+\index{player2Won@{player2Won}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{player2Won}{player2Won}}
+{\footnotesize\ttfamily bool Executive\+::player2\+Won = false\hspace{0.3cm}{\ttfamily [private]}}
+
+Player 2 win tracker \mbox{\Hypertarget{class_executive_a6a72a7a54e816899072732df36fa548b}\label{class_executive_a6a72a7a54e816899072732df36fa548b}} 
+\index{Executive@{Executive}!row1@{row1}}
+\index{row1@{row1}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{row1}{row1}}
+{\footnotesize\ttfamily int Executive\+::row1\hspace{0.3cm}{\ttfamily [private]}}
+
+Row column temp variables \mbox{\Hypertarget{class_executive_a5d96027b87215ab85e4adf940e09f346}\label{class_executive_a5d96027b87215ab85e4adf940e09f346}} 
+\index{Executive@{Executive}!row2@{row2}}
+\index{row2@{row2}!Executive@{Executive}}
+\doxysubsubsection{\texorpdfstring{row2}{row2}}
+{\footnotesize\ttfamily int Executive\+::row2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/ankee/\+Documents/\+Git\+Hub/\+Battleship-\/\+EECS448-\/\+Team10-\/\+P2/\mbox{\hyperlink{_executive_8h}{Executive.\+h}}\item 
+C\+:/\+Users/ankee/\+Documents/\+Git\+Hub/\+Battleship-\/\+EECS448-\/\+Team10-\/\+P2/\mbox{\hyperlink{_executive_8cpp}{Executive.\+cpp}}\end{DoxyCompactItemize}
